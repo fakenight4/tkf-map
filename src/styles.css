@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root,
+.app {
+  margin: 0;
+  height: 100%;
+  background: #0b0d10;
+  color: #e8eaed;
+  font-family: "Segoe UI", sans-serif;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.app-radar {
+  background: rgba(11, 13, 16, 0.35);
+}
+.toolbar,
+.settings,
+.status {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 12px;
+  background: #15181d;
+  font-size: 13px;
+}
+.settings {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+.settings > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.settings code {
+  flex: 1;
+  min-width: 200px;
+  background: #0006;
+  padding: 4px 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.toolbar select,
+.toolbar button,
+.settings button {
+  background: #2a313c;
+  color: inherit;
+  border: 0;
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+.spacer {
+  flex: 1;
+}
+.coords {
+  font-variant-numeric: tabular-nums;
+  color: #ffcc33;
+}
+.map-root {
+  flex: 1;
+  min-height: 0;
+  background: #000;
+}
+.map-root-compact {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.map-empty {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  opacity: 0.6;
+}
+.hidden-layer {
+  display: none !important;
+}
+.map-place-label-wrap {
+  background: none !important;
+  border: 0 !important;
+}
+.leaflet-marker-icon.map-area-label {
+  background: none !important;
+  border: 0 !important;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff3c4;
+  letter-spacing: 0.04em;
+  text-shadow:
+    1px 0 0 #111,
+    -1px 0 0 #111,
+    0 1px 0 #111,
+    0 -1px 0 #111;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+.leaflet-marker-icon.map-area-label .label {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  top: 0;
+  transform-origin: center center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.leaflet-marker-icon.map-area-label-compact {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff8dc;
+  text-shadow:
+    1px 0 0 #000,
+    -1px 0 0 #000,
+    0 1px 0 #000,
+    0 -1px 0 #000;
+}
+.leaflet-marker-icon.map-area-label-compact .label {
+  width: 140px;
+}
+.status {
+  font-size: 12px;
+  color: #9aa3ad;
+  -webkit-app-region: drag;
+}
